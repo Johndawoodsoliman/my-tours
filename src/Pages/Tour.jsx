@@ -14,7 +14,7 @@ const Tour = () => {
       </Typography>
           <Box sx={{ display:'flex', width: "100%", height:"100%"}}>
         <img
-          src="../../public/2024071108583657974460.jpg"
+          src="/2024071108583657974460.jpg"
           alt="shap" height={300} 
                  
               />
