@@ -1,0 +1,30 @@
+@media (max-width: 600px) {
+  .gool {
+    padding: 5px;
+  }
+}
+@media (max-width: 400px) {
+  .gool {
+    padding: 0px;
+  }
+}
+
+.img {
+  width: 100%;
+  height: 200px;
+}
+@media (max-width: 600px) {
+  .img {
+    height: 150px;
+  }
+}
+@media (max-width: 400px) {
+  .img {
+    height: 120px;
+  }
+}
+@media (max-width: 300px) {
+  .img {
+    height: 100px;
+  }
+}

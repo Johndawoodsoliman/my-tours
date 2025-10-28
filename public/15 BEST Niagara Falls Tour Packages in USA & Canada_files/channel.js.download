@@ -1,0 +1,685 @@
+// 配置特定的medium 以及 source
+const URLS = [
+    {
+        domain: '163.com',
+        utm_medium: 'Referral',
+        utm_source: 163
+    },
+    {
+        domain: '7niuyue.com',
+        utm_medium: 'Referral',
+        utm_source: '7niuyue'
+    },
+    {
+        domain: '7wengehua.com',
+        utm_medium: 'Referral',
+        utm_source: '7wengehua'
+    },
+    {
+        domain: 'ab173.com',
+        utm_medium: 'Referral',
+        utm_source: 'ab173'
+    },
+    {
+        domain: 'americachineselife.com',
+        utm_medium: 'Referral',
+        utm_source: 'americachineselife'
+    },
+    {
+        domain: 'aoxinlvyou.com',
+        utm_medium: 'Referral',
+        utm_source: 'aoxinlvyou'
+    },
+    {
+        domain: 'backpackers.com',
+        utm_medium: 'Referral',
+        utm_source: 'backpackers'
+    },
+    {
+        domain: 'aliyun.com',
+        utm_medium: 'Referral',
+        utm_source: 'aliyun'
+    },
+    {
+        domain: 'bazhuayu.com',
+        utm_medium: 'Referral',
+        utm_source: 'bazhuayu'
+    },
+    {
+        domain: 'xinmedia.com',
+        utm_medium: 'Referral',
+        utm_source: 'xinmedia'
+    },
+    {
+        domain: 'bytravel.cn',
+        utm_medium: 'Referral',
+        utm_source: 'bytravel'
+    },
+    {
+        domain: 'thechihuo.com',
+        utm_medium: 'Referral',
+        utm_source: 'thechihuo'
+    },
+    {
+        domain: 'chineseinla.cn',
+        utm_medium: 'Referral',
+        utm_source: 'chineseinla'
+    },
+    {
+        domain: 'chineseinvegas.com',
+        utm_medium: 'Referral',
+        utm_source: 'chineseinvegas'
+    },
+    {
+        domain: 'comefromchina.com',
+        utm_medium: 'Referral',
+        utm_source: 'comefromchina'
+    },
+    {
+        domain: 'ctrip.com',
+        utm_medium: 'Referral',
+        utm_source: 'ctrip'
+    },
+    {
+        domain: 'daoduoduo.com',
+        utm_medium: 'Referral',
+        utm_source: 'daoduoduo'
+    },
+    {
+        domain: 'dealmoon.com',
+        utm_medium: 'Referral',
+        utm_source: 'dealmoon'
+    },
+    {
+        domain: 'duomai.com',
+        utm_medium: 'Referral',
+        utm_source: 'duomai'
+    },
+    {
+        domain: 'enewstree.com',
+        utm_medium: 'Referral',
+        utm_source: 'enewstree'
+    },
+    {
+        domain: 'fliggy.com',
+        utm_medium: 'Referral',
+        utm_source: 'fliggy'
+    },
+    {
+        domain: 'haitang.com',
+        utm_medium: 'Referral',
+        utm_source: 'haitang'
+    },
+    {
+        domain: 'haitao.com',
+        utm_medium: 'Referral',
+        utm_source: 'haitao'
+    },
+    {
+        domain: 'hao123.com',
+        utm_medium: 'Referral',
+        utm_source: 'hao123'
+    },
+    {
+        domain: 'hao8090.com',
+        utm_medium: 'Referral',
+        utm_source: 'hao8090'
+    },
+    {
+        domain: 'houstonbbs.com',
+        utm_medium: 'Referral',
+        utm_source: 'houstonbbs'
+    },
+    {
+        domain: 'huaban.com',
+        utm_medium: 'Referral',
+        utm_source: 'huaban'
+    },
+    {
+        domain: 'IFunVegas.com',
+        utm_medium: 'Referral',
+        utm_source: 'IFunVegas'
+    },
+    {
+        domain: 'afternic.com',
+        utm_medium: 'Referral',
+        utm_source: 'afternic'
+    },
+    {
+        domain: 'juxiao.com',
+        utm_medium: 'Referral',
+        utm_source: 'juxiao'
+    },
+    {
+        domain: 'linkedin.com',
+        utm_medium: 'Referral',
+        utm_source: 'linkedn'
+    },
+    {
+        domain: 'linktech.com',
+        utm_medium: 'Referral',
+        utm_source: 'linktech'
+    },
+    {
+        domain: 'LondonBang.com',
+        utm_medium: 'Referral',
+        utm_source: 'LondonBang'
+    },
+    {
+        domain: 'mafengwo.cn',
+        utm_medium: 'Referral',
+        utm_source: 'mafengwo'
+    },
+    {
+        domain: 'meijialx.com',
+        utm_medium: 'Referral',
+        utm_source: 'meijialx'
+    },
+    {
+        domain: 'hugedomains.com',
+        utm_medium: 'Referral',
+        utm_source: 'hugedomains'
+    },
+    {
+        domain: 'nybbs.com',
+        utm_medium: 'Referral',
+        utm_source: 'nybbs'
+    },
+    {
+        domain: 'panshi.com',
+        utm_medium: 'Referral',
+        utm_source: 'panshi'
+    },
+    {
+        domain: 'pinterest.com',
+        utm_medium: 'Referral',
+        utm_source: 'pinterest'
+    },
+    {
+        domain: 'pixnet.net',
+        utm_medium: 'Referral',
+        utm_source: 'pixnet'
+    },
+    {
+        domain: 'qunar.com',
+        utm_medium: 'Referral',
+        utm_source: 'qunar'
+    },
+    {
+        domain: 'quora.com',
+        utm_medium: 'Referral',
+        utm_source: 'quora'
+    },
+    {
+        domain: 'reddit.com',
+        utm_medium: 'Referral',
+        utm_source: 'reddit'
+    },
+    {
+        domain: 'shareasale.com',
+        utm_medium: 'Referral',
+        utm_source: 'ShareASale'
+    },
+    {
+        domain: 'sina.com.cn',
+        utm_medium: 'Referral',
+        utm_source: 'sina'
+    },
+    {
+        domain: 'taboola.com',
+        utm_medium: 'Referral',
+        utm_source: 'Taboola'
+    },
+    {
+        domain: 'taobao.com',
+        utm_medium: 'Referral',
+        utm_source: 'taobao'
+    },
+    {
+        domain: 'tianxun.com',
+        utm_medium: 'Referral',
+        utm_source: 'tianxun'
+    },
+    {
+        domain: 'tmall.com',
+        utm_medium: 'Referral',
+        utm_source: 'tmall'
+    },
+    {
+        domain: 'chinaz.com',
+        utm_medium: 'Referral',
+        utm_source: 'top.chinaz'
+    },
+    // {
+    //     domain: 'tours4fun.com',
+    //     utm_medium: 'Referral',
+    //     utm_source: 'tours4fun'
+    // },
+    {
+        domain: 'toutiao.com',
+        utm_medium: 'Referral',
+        utm_source: 'toutiao'
+    },
+    {
+        domain: 'trip.com',
+        utm_medium: 'Referral',
+        utm_source: 'trip'
+    },
+    {
+        domain: 'tumblr.com',
+        utm_medium: 'Referral',
+        utm_source: 'tumblr'
+    },
+    {
+        domain: 'uzai.com',
+        utm_medium: 'Referral',
+        utm_source: 'uzai'
+    },
+    {
+        domain: 'vhday.com',
+        utm_medium: 'Referral',
+        utm_source: 'vhday'
+    },
+    {
+        domain: 'weibo.com',
+        utm_medium: 'Referral',
+        utm_source: 'weibo'
+    },
+    {
+        domain: 'wenxuecity.com',
+        utm_medium: 'Referral',
+        utm_source: 'wenxuecity'
+    },
+    {
+        domain: 'usdailyrewards.com',
+        utm_medium: 'Referral',
+        utm_source: 'usdailyrewards'
+    },
+    {
+        domain: 'eztravel.com',
+        utm_medium: 'Referral',
+        utm_source: 'eztravel'
+    },
+    {
+        domain: 'yiqifa.com',
+        utm_medium: 'Referral',
+        utm_source: 'yiqifa'
+    },
+    {
+        domain: 'zhihu.com',
+        utm_medium: 'Referral',
+        utm_source: 'zhihu'
+    },
+    {
+        domain: 'zyoulun.com',
+        utm_medium: 'Referral',
+        utm_source: 'zyoulun'
+    },
+    {
+        domain: 'yamibuy.com',
+        utm_medium: 'Referral',
+        utm_source: 'yamibuy'
+    },
+    {
+        domain: 'csdn.net',
+        utm_medium: 'Referral',
+        utm_source: 'csdn'
+    },
+    {
+        domain: 'mail.126.com',
+        utm_medium: 'Referral',
+        utm_source: '@126'
+    },
+    {
+        domain: 'mail.139.com',
+        utm_medium: 'Referral',
+        utm_source: '@139'
+    },
+    {
+        domain: 'mail.163.com',
+        utm_medium: 'Referral',
+        utm_source: '@163'
+    },
+    {
+        domain: 'mail.foxmail.com',
+        utm_medium: 'Referral',
+        utm_source: '@foxmail'
+    },
+    {
+        domain: 'mail.gmail.com',
+        utm_medium: 'Referral',
+        utm_source: '@gmail'
+    },
+    {
+        domain: 'mail.hotmail.com',
+        utm_medium: 'Referral',
+        utm_source: '@hotmail'
+    },
+    {
+        domain: 'mail.outlook.com',
+        utm_medium: 'Referral',
+        utm_source: '@outlook'
+    },
+    {
+        domain: 'mail.qq.com',
+        utm_medium: 'Referral',
+        utm_source: '@qq'
+    },
+    {
+        domain: 'mail.sina.com',
+        utm_medium: 'Referral',
+        utm_source: '@sina'
+    },
+    {
+        domain: 'mail.yahoo.com',
+        utm_medium: 'Referral',
+        utm_source: '@yahoo'
+    },
+    {
+        domain: 'flirtychat.online',
+        utm_medium: 'Referral',
+        utm_source: 'flirtychat'
+    },
+    {
+        domain: 'leisure.com',
+        utm_medium: 'Referral',
+        utm_source: 'leisure'
+    },
+    {
+        domain: 'toursforfun.com',
+        utm_medium: 'Referral',
+        utm_source: 'toursforfun'
+    },
+    {
+        domain: 'syndicatedsearch.goog',
+        utm_medium: 'Referral',
+        utm_source: 'syndicatedsearch'
+    },
+    {
+        domain: 'dealtruck.net',
+        utm_medium: 'Referral',
+        utm_source: 'dealtruck'
+    },
+    {
+        domain: 'redlinerev.com',
+        utm_medium: 'Referral',
+        utm_source: 'redlinerev'
+    },
+    {
+        domain: 'crowdsearch.net',
+        utm_medium: 'Referral',
+        utm_source: 'crowdsearch'
+    },
+    {
+        domain: 'bargainboom.com',
+        utm_medium: 'Referral',
+        utm_source: 'bargainboom'
+    },
+    {
+        domain: 'fahnd.com',
+        utm_medium: 'Referral',
+        utm_source: 'fahnd'
+    },
+    {
+        domain: '4stardealz.com',
+        utm_medium: 'Referral',
+        utm_source: '4stardealz'
+    },
+    {
+        domain: 'tip-digest.com',
+        utm_medium: 'Referral',
+        utm_source: 'tipdigest'
+    },
+    {
+        domain: 'boxcar.net',
+        utm_medium: 'Referral',
+        utm_source: 'boxcar'
+    },
+    {
+        domain: 'exclaim.com',
+        utm_medium: 'Referral',
+        utm_source: 'exclaim'
+    },
+    {
+        domain: 'softy.org',
+        utm_medium: 'Referral',
+        utm_source: 'softy'
+    },
+    {
+        domain: 'webnavigator.com',
+        utm_medium: 'Referral',
+        utm_source: 'webnavigator'
+    },
+    {
+        domain: 'mobisearcher.com',
+        utm_medium: 'Referral',
+        utm_source: 'mobisearcher'
+    },
+    {
+        domain: 'amazingfact.org',
+        utm_medium: 'Referral',
+        utm_source: 'amazingfact'
+    },
+    {
+        domain: 'findwith.me',
+        utm_medium: 'Referral',
+        utm_source: 'findwith'
+    },
+    {
+        domain: 'capitaloneshopping.com',
+        utm_medium: 'Referral',
+        utm_source: 'capitaloneshopping'
+    },
+    {
+        domain: 'tours4fun.es',
+        utm_medium: 'Referral',
+        utm_source: 'tours4funes'
+    },
+    {
+        domain: 'taketours.com',
+        utm_medium: 'Referral',
+        utm_source: 'taketours'
+    },
+    {
+        domain: 'klarna',
+        utm_medium: 'Referral',
+        utm_source: 'klarna'
+    },
+    {
+        domain: 'promocodes.com',
+        utm_medium: 'Referral',
+        utm_source: 'promocodes'
+    },
+    {
+        domain: 'statics.teams',
+        utm_medium: 'Referral',
+        utm_source: 'staticsteams'
+    },
+    {
+        domain: 'teams.microsoft',
+        utm_medium: 'Referral',
+        utm_source: 'teamsmicrosoft'
+    },
+    {
+        domain: 'buybutwhere.com',
+        utm_medium: 'Referral',
+        utm_source: 'buybutwhere'
+    },
+    {
+        domain: 'keep.google',
+        utm_medium: 'Referral',
+        utm_source: 'keepgoogle'
+    },
+    {
+        domain: 'unum.com',
+        utm_medium: 'Referral',
+        utm_source: 'unum'
+    },
+    {
+        domain: 'affinity.net',
+        utm_medium: 'Referral',
+        utm_source: 'affinity'
+    },
+    {
+        domain: 'catholic.edu',
+        utm_medium: 'Referral',
+        utm_source: 'catholic'
+    },
+    {
+        domain: 'tagassistant.google',
+        utm_medium: 'Referral',
+        utm_source: 'tagassistant'
+    }
+];
+
+const ORGANIC_DOMAINS = [
+    'baidu.com',
+    'so.com',
+    'google.com',
+    'sogou.com',
+    'soso.com',
+    'yahoo.cn',
+    'yahoo.com',
+    'bing.com',
+    'youdao.com',
+    'haosou.com',
+    'ask.com',
+    'aol.com',
+    'aol.ca',
+    'duckduckgo.com',
+    'chatgpt.com',
+    'msn.cn',
+    'yandex.com',
+    'yandex.ru',
+    'yandex.eu',
+    'naver.com',
+    'ecosia.org',
+    'qwant.com',
+    'seznam.cz',
+    'daum.net',
+    'dogpile.com',
+    'nowsearchit.com'
+];
+
+// 获取url参数
+const getUrlSearch = () => {
+    const args = {};
+    // url的search参数
+    const searchParams = decodeURIComponent(window.location.search.replace(/\?/g, '')).split('&');
+    // 处理url的search参数
+    searchParams.forEach((item) => item.includes('=') && (args[item.split('=')[0]] = item.split('=')[1]));
+    return args;
+};
+// 设置cookie
+const setCookie = (cookieName, cookieValue, cookieExpires, cookiePath, cookieSecure) => {
+    // cookie域名
+    const cookieDomain = ';domain=.tours4fun.com';
+    // cookie过期时间
+    const expires = cookieExpires ? ';expires=' + new Date(new Date().getTime() + cookieExpires * 24 * 60 * 60 * 1000).toUTCString() : '';
+    // cookie path
+    const path = cookiePath ? `;path=${cookiePath}` : ';path=/';
+    // cookie secure
+    const secure = cookieSecure ? ';secure' : '';
+    // 种cookie
+    document.cookie = `${cookieName}=${encodeURIComponent(cookieValue)}${expires}${path}${cookieDomain}${secure}`;
+};
+// 获取cookie
+const getCookie = (cookieName) => {
+    let value = '-';
+    const name = cookieName + '=';
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        const c = ca[i].trim();
+        c.indexOf(name) === 0 && (value = c.substring(name.length, c.length));
+    }
+    return value;
+};
+// 检测sec
+const checkSeo = (url) => {
+    // referrer黑名单
+    const excludeDomain = ['accounts.google.com'];
+    const urlReg = /(?:http(?:s)?\/\/)?([^/?#]+)(?=\/)?/gim;
+    const domain = (url.match(urlReg) ? url.match(urlReg)[1] : '').replace('www.', '');
+    // url
+    const pattern = /(\w+)=(.*?)(&|$)/gi;
+    const parames = {};
+    url.replace(pattern, (a, b, c) => {
+        parames[b] = c;
+    });
+    let obj = {};
+
+    if (!excludeDomain.includes(domain) && ORGANIC_DOMAINS.includes(domain) && !domain.includes('@')) {
+        obj = {
+            utm_medium: 'Organic Search',
+            utm_source: domain
+        };
+    } else {
+        obj = URLS.find((i) => domain.includes(i.domain)) || {};
+    }
+    return obj;
+};
+// 设置utm渠道cookie
+const setUtmCookie = () => {
+    // 获取url参数
+    const urlParams = getUrlSearch();
+    let params = {};
+    if (Object.prototype.hasOwnProperty.call(urlParams, 'utm_source') || Object.prototype.hasOwnProperty.call(urlParams, 'utm_medium')) {
+        params = urlParams;
+    } else {
+        // 页面首次进入且referrer不为空,则判断当前referrer是否是seo来源
+        window.performance.navigation.type !== 1 && document.referrer && (params = checkSeo(document.referrer));
+    }
+    if (Object.keys(params).length > 0) {
+        const cookieSource = {};
+        Object.prototype.hasOwnProperty.call(params, 'utm_source') && (cookieSource.utm_source = params.utm_source);
+        Object.prototype.hasOwnProperty.call(params, 'utm_medium') && (cookieSource.utm_medium = params.utm_medium);
+        Object.prototype.hasOwnProperty.call(params, 'utm_term') && (cookieSource.utm_term = params.utm_term);
+        getCookie('BI___TAFirstSource') === '-' && setCookie('BI___TAFirstSource', JSON.stringify(cookieSource), 30);
+        setCookie('BI___TALastSource', JSON.stringify(cookieSource), 30);
+        // 测试市场渠道
+        const BITASourceTestCookie = getCookie('BI___TASourceTest');
+        const BITASourceTestValue = BITASourceTestCookie === '-' ? [] : JSON.parse(decodeURIComponent(BITASourceTestCookie));
+        // 如果数组长度超过10个，则更新最后一条数据
+        BITASourceTestValue.length >= 10 && BITASourceTestValue.pop();
+        BITASourceTestValue.push(cookieSource);
+        setCookie('BI___TASourceTest', JSON.stringify(BITASourceTestValue), 30 * 12);
+    }
+    // 记录测试refer
+    if (window.performance.navigation.type !== 1 && document.referrer) {
+        const urlReg = /(?:http(?:s)?\/\/)?([^/?#]+)(?=\/)?/gim;
+        const domain = (document.referrer.match(urlReg) ? document.referrer.match(urlReg)[1] : '').replace('www.', '');
+        // 测试市场渠道refer
+        const BITAReferCookie = getCookie('BI___TARefer');
+        const BITAReferValue = BITAReferCookie === '-' ? [] : JSON.parse(decodeURIComponent(BITAReferCookie));
+        // 如果数组长度超过10个，则更新最后一条数据
+        BITAReferValue.length >= 10 && BITAReferValue.pop();
+        BITAReferValue.push(domain);
+        setCookie('BI___TARefer', JSON.stringify(BITAReferValue), 30 * 12);
+    }
+};
+// 设置运营渠道cookie
+const setOpCookie = () => {
+    // 获取url参数
+    const urlParams = getUrlSearch();
+    let params = {};
+    if (Object.prototype.hasOwnProperty.call(urlParams, 'ici') || Object.prototype.hasOwnProperty.call(urlParams, 'icn')) {
+        params = urlParams;
+    }
+    if (Object.keys(params).length > 0) {
+        const cookieSource = {};
+        Object.prototype.hasOwnProperty.call(params, 'ici') && (cookieSource.ici = params.ici);
+        Object.prototype.hasOwnProperty.call(params, 'icn') && (cookieSource.icn = params.icn);
+        getCookie('BI___OPFirstSource') === '-' && setCookie('BI___OPFirstSource', JSON.stringify(cookieSource), 30);
+        setCookie('BI___OPLastSource', JSON.stringify(cookieSource), 30);
+        // 测试市场渠道
+        const BIOPSourceTestCookie = getCookie('BI___OPSourceTest');
+        const BIOPSourceTestValue = BIOPSourceTestCookie === '-' ? [] : JSON.parse(decodeURIComponent(BIOPSourceTestCookie));
+        // 如果数组长度超过10个，则更新最后一条数据
+        BIOPSourceTestValue.length >= 10 && BIOPSourceTestValue.pop();
+        BIOPSourceTestValue.push(cookieSource);
+        setCookie('BI___OPSourceTest', JSON.stringify(BIOPSourceTestValue), 30 * 12);
+    }
+};
+
+setUtmCookie();
+setOpCookie();

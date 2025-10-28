@@ -1,0 +1,32 @@
+.img{
+    width: 100%;
+   height: 200px;
+}
+
+@media screen {
+   .All{
+      padding: 10px;
+   }
+}
+
+@media (max-width: 600px) {
+   .All{
+      padding: 0px;
+   }
+}
+@media (max-width: 600px) {
+   .img{
+      height: 150px;
+   }
+}
+@media (max-width: 400px) {
+   .img{
+      height: 120px;
+   }
+}
+@media (max-width: 300px) {
+   .img{
+      height: 100px;
+   }
+}
+    

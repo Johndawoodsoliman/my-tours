@@ -1,0 +1,21 @@
+.tou{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+@media (max-width: 600px) {
+   .tou{
+      margin-top: 10px;
+      margin-bottom: 10px;
+   }
+}   
+@media (max-width: 400px) {
+   .tou{
+      margin-top: 5px;
+      margin-bottom: 5px;
+   }
+}
+
+
+            
