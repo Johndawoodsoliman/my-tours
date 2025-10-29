@@ -19,14 +19,7 @@ const ImageCollage = () => {
 }
 
 const itemData = [
-  {
-    img: "/2024071108583657974460.jpg",
-    title: "Local Image 1",
-  },
-  {
-    img: "/20220620061512715923899.jpg",
-    title: "Local Image 2",
-  },
+
   {
     img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
     title: "Breakfast",
