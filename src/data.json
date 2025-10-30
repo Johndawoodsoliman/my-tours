@@ -29,7 +29,7 @@
         "rating": 4.5,
         "numberOfReviews": 133,
         "price": 144,
-        "image": "../public/20220620061512715923899.jpg"
+        "image": "/20220620061512715923899.jpg"
       },
       {
         "id": 4,
@@ -62,7 +62,7 @@
         "rating": 4.5,
         "numberOfReviews": 462,
         "price": 465,
-        "image": "../public/2024071108583657974460.jpg"
+        "image": "/2024071108583657974460.jpg"
       },
       {
         "id": 6,
