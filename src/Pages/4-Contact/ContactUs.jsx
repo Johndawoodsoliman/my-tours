@@ -1,19 +1,18 @@
-// import MailAnimation from "../../animation/mail.json";
 import Lottie from "lottie-react";
 import "./Contact.css";
-// import DoneAnimation from "../../animation/success.json";
+
 import MailAnimation from "../../animation/mail.json";
 import DoneAnimation from "../../animation/success.json";
-
 
 import { useForm, ValidationError } from "@formspree/react";
 export default function ContactUs() {
   const [state, handleSubmit] = useForm("mldpopyb");
- 
+
   return (
     <section id="contact-us" className="contact">
       <h1 className="title flex">
-        <span className="icon-mail-envelope-closed" />Contact-US
+        <span className="icon-mail-envelope-closed" />
+        Contact-US
       </h1>
       <p className="subtitle">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit ipsum
@@ -78,7 +77,6 @@ export default function ContactUs() {
 
           {/* Animation */}
           <div className="section-right  animation">
-            
             <Lottie
               style={{ width: "300px", height: "300px" }}
               animationData={MailAnimation}
