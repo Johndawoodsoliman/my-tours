@@ -27,7 +27,7 @@ const Tour = () => {
         Imageed how good
       </Typography>
 
-      <Box
+      <Box className="tour-section"
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row" },

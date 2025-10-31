@@ -10,20 +10,29 @@ import AccessTime from "@mui/icons-material/AccessTime";
 
 const ToursCared = ({tours}) => {
    return (
-     <Grid className='All' item xs={3}>
-       <Paper elevation={6}>
+     <Grid className="All  " item xs={3}>
+       <Paper className='im-inf'  elevation={6}>
+         
+
          <img src={tours.image} className="img" />
-         <Typography variant="body1" component="p" marginLeft={1}>
+
+        <div className="info  ">
+         <Typography
+           variant="body1"
+           component="p"
+           marginLeft={1}
+         >
            {tours.name}
          </Typography>
-         <Box
+         <Box className="time "
            sx={{
              display: "flex",
              alignItems: "center",
              marginLeft: "4px",
            }}
          >
-           <AccessTime fontSize="small" />
+           <AccessTime
+             fontSize="small" />
            <Typography
              variant="body2"
              component="p"
@@ -48,7 +57,8 @@ const ToursCared = ({tours}) => {
              size="small"
            />
            <Typography marginLeft={1}>{tours.rating}</Typography>
-           <Typography className='rev'
+           <Typography
+             className="rev"
              variant="body2"
              component="p"
              marginLeft={1}
@@ -61,7 +71,13 @@ const ToursCared = ({tours}) => {
            <Typography variant="h6" component="h3" marginLeft={1}>
              Form C ${tours.price}
            </Typography>
+
+
+           
          </Box>
+
+        </div>
+
        </Paper>
      </Grid>
    );

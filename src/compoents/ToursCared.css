@@ -2,6 +2,16 @@
     width: 100%;
    height: 200px;
 }
+.im-inf{
+   width: 225px;
+  
+   border: 2px solid #f0828256  ;
+}
+.info{
+
+   padding: 10px;
+   background-image: linear-gradient(to right, #dbabab, #8b4242);
+}
 
 @media screen {
    .All{
