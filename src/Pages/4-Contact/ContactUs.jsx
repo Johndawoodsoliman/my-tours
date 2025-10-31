@@ -1,7 +1,7 @@
 import Lottie from "lottie-react";
 import "./Contact.css";
 
-import MailAnimation from "../../animation/mail.json";
+import MailAnimation from "../../animation/Mail.json";
 import DoneAnimation from "../../animation/success.json";
 
 import { useForm, ValidationError } from "@formspree/react";
